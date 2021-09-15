@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="ico.png" sizes="16x16">
+
+    <title>Nivell 1</title>
+
+    <style>
+        body {
+            background-color: rgb(0, 179, 179);
+            font-size: 4vw;
+            color:white;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <script>
+
+
+        var num1 = prompt("Introduce el primer número");
+        num1 = parseInt(num1);
+        var num2 = prompt("Introduce el segundo número");
+        num2 = parseInt(num2);
+        var operador = prompt("Introduce un operador: sumar, restar, multiplicar o dividir").toLowerCase();
+
+        var resultat = calculadora(operador, num1, num2);
+        document.write("<p> El resultado de la operación es: " + resultat + "</p>");
+        
+
+        function calculadora(operador, num1, num2){
+            if(operador == "sumar"){
+                return num1 + num2;
+            }else if(operador == "restar"){
+                return num1 - num2;
+            }else if(operador == "multiplicar"){
+                return num1 * num2;
+            }else if(operador == "dividir"){
+                if(num2 == 0){
+                    alert("Un número entero no se puede dividir entre 0")
+                }else{
+                    return num1 / num2;
+                }
+                
+            }else{
+                alert("Opción incorrecta");
+            }
+        }
+    
+    </script>
+    
+</body>
+</html>

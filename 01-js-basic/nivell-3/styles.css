@@ -1,0 +1,192 @@
+
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#0c5e68;
+  background: rgb(214, 230, 241);
+}
+
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  /* background:linear-gradient(
+    to bottom right,
+    purple 0%,
+    salmon 100%
+  ); */
+}
+
+.custom{
+  background: pink;
+  width: 350px;
+  height: 50px;
+  display: flex;
+  border-radius: 10px 10px 0 0;
+}
+.custom >*{
+  width: 50%;
+  border:none;
+  position: relative;
+  z-index: 150;
+}
+
+#cold {
+  border-radius: 10px 0 0 0 ;
+  background: #91e6eb;
+}
+#warm {
+  border-radius: 0 10px 0 0 ;
+  background: #f5caca;
+}
+
+
+
+/**********cold style ************************/
+
+.img-cold{
+  background: url(img/esparraguera_5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-warm{
+  background: url(img/flor-playa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fondo-cold{
+  background:linear-gradient(
+    to bottom right,
+    rgb(82, 190, 209) 0%,
+    rgb(121, 230, 220) 100%
+  );
+}
+
+.fondo-warm{
+  background:linear-gradient(
+    to bottom right,
+    rgb(241, 198, 191) 0%,
+    rgb(238, 199, 221) 100%
+  );
+}
+
+.bg-dark{
+  background-color: #04393e;
+}
+
+/**********end cold style ************************/
+
+
+.customize {
+  margin:20px;
+  background: rgba(255, 255, 255, 0.781);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.178);
+  border: 1px solid rgb(235, 133, 133);
+}
+
+.calculator{
+  width: 350px;
+  height: 453px;
+  /*para poder darle la sombra con after*/
+  position: relative;
+  background: transparent;
+}
+
+.calculator::after {
+  /*si no tiene contenido no se dibuja */
+  content: "";
+  /* para que tenga dimensiones */
+  display: block;
+  /* para que se coloque respecto al padre */
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  /* tamaño horizontal, tamaño vertical, desenfoque, color */
+  box-shadow: 0 10px 20px black;
+  /* opacidad del 3% */
+  opacity: .3;
+  border-radius: 0 0 10px 10px;
+}
+
+
+.top-bar:nth-last-child(){
+  border-radius: 10px;
+}
+
+
+.screen {
+  width: 100%;
+  height: 120px;
+  text-align: right;
+  padding-right:1rem;
+  padding-top:.5rem;
+  background: rgba(255, 255, 255, 0.781);
+}
+
+.screen-top{
+  font-size: 1.5rem;
+}
+
+.screen-content {
+  font-size: 4rem;
+}
+.buttons{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-top: 5px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  /* uso em en vez de rem porque quiero que el padding sea relativo */
+  padding: 1em;
+  font-size:1.21rem;
+  background: rgba(255, 255, 255, 0.781);
+  position:relative;
+  z-index:100;
+}
+
+.button:nth-child(4n){
+  background: #73e7eb88;
+}
+
+/* afecta al hijo 17 */
+.button:nth-child(17){
+  border-bottom-left-radius: 10px;
+}
+.button:last-child{
+  border-bottom-right-radius: 10px;
+}
+/* pseudoclase not hace que el codigo interior no se aplique al elemento indicado */
+.button:not(:nth-child(18)):hover{
+  cursor: pointer;
+  background: #73e7eb88;
+}
+
+
+
+
+
+
+
+
+

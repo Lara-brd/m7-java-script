@@ -1,0 +1,105 @@
+
+nav {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* boton signin */
+
+header .signin {
+  border:none;
+}
+
+header .btn-search {
+  border:none;
+}
+
+header .btn-search:hover,
+header .btn-search:focus,
+header .btn-search:active,
+header .signin:hover,
+header .signin:focus,
+header .signin:active {
+  color:gray;
+  box-shadow: none;
+  border:none;
+  box-shadow: none;
+}
+
+
+
+
+
+/* MyButton
+-------------------------------------------------- */
+
+.btn-myb {
+  font-size: 0.8rem;
+  padding: 5px 15px;
+  border: 1px solid transparent;
+  background-color: #3bb9c4;
+  text-transform: uppercase;
+
+}
+
+
+/* modificando el texto y el color de fondo en los tres estados
+   principales del botón: default, hover y active. */
+
+.btn-myb,
+.btn-myb:hover,
+.btn-myb:active,
+.btn-myb:focus  {
+color: white;
+box-shadow: none;
+}
+
+
+/* Estilos del estado :hover del botón */
+.btn-myb:hover{
+  border: 1px solid #3bb9c4;
+  background-color: white;
+  color: #3bb9c4;
+}
+
+/*--------------------------------- */
+
+
+/* modal body borde inferior */
+header .modal-body,
+header .modal-header {
+  border-bottom: 1px solid #3bb9c4;
+  color:rgb(180, 180, 180);
+}
+
+.lost-password a {
+  text-decoration: none;
+}
+
+/* modal close */
+.btn-close:hover, 
+.btn-close:focus,
+.btn-close:active{
+  box-shadow: none;
+}
+
+.carousel-inner h5{
+  font-family: 'Bodoni Moda', serif;
+  font-size:4vw;
+}
+
+
+main .texto h2{
+  font-family: 'Bodoni Moda', serif;
+}
+
+main .title-2 {
+  text-transform: uppercase;
+}
+
+footer p {
+  color:gray
+}
+
+
+
+

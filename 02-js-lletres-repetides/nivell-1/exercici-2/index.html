@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../../img/ico.png" sizes="16x16">
+    <title>M7-02-nivell1</title>
+</head>
+<body>
+
+    <script>
+        var nombre = ['A', 'N', 'A', 7, 'M', 'A', 'R', 'I','A'];
+        for(var i = 0; i<nombre.length;i++){
+            //numero
+            if(typeof nombre[i] == 'number'){
+                console.log('Els noms de persones no contenen el número: ' + nombre[i]);
+            //vocal
+            }else if(nombre[i] == 'A' || nombre[i] == 'E' || nombre[i] == 'I' || nombre[i] == 'O' || nombre[i] == ''){
+                console.log('He trobat la VOCAL: ' + nombre[i]);
+            //consonant
+            }else{
+                console.log('He trobat la CONSONANT: ' + nombre[i]);
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

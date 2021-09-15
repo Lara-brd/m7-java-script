@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../../img/ico.png" sizes="16x16">
+    <title>exer 3</title>
+</head>
+<body>
+
+    <script>
+
+        const repeated = [];
+        var miNombre = ["A", "N", "A"];
+    
+
+        miNombre.map(function(letra){
+            repeated[letra] = ((repeated[letra] || 0 )+ 1);
+
+        });
+
+        console.log(repeated);
+
+
+
+
+
+        /*
+        ****INTENTO INICIAL*********************************
+
+        const nombre = ['A', 'N', 'A', 'M', 'A', 'R', 'I','A']
+
+        function find_duplicate(array){
+            const count = []
+            const result = []
+
+            array.map(item => {
+                if (count[item]) {
+                count[item] +=1
+                return
+                }
+                count[item] = 1
+            })
+
+            for (let prop in count){
+                if (count[prop] >=2){
+                    result.push(prop)
+                }
+            }
+
+            console.log(count)
+            return result;
+
+        }
+
+        find_duplicate(nombre)
+        
+        
+        */
+
+        
+    
+    </script>
+
+
+    
+    
+</body>
+</html>

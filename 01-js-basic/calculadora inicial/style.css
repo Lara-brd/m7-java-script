@@ -1,0 +1,23 @@
+
+main {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100vh;
+    max-width: 1000px;
+    margin-right:auto;
+    margin-left: auto;
+}
+
+main >* {
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:first-child {
+    grid-column: 1/5;
+    background-color: pink;
+}

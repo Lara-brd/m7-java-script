@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBootstrap</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+  <!-- myCSS -->
+  <link rel="stylesheet" href="mycss/estilos.css">
+
+
+
+
+</head>
+<body>
+
+<header>
+
+  <nav class="navbar navbar-expand-lg navbar-light pt-2 pb-2 pb-lg-4 pt-lg-4 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LOGO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our Style</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+        </ul>
+
+        <!-- Button trigger modal -->
+        <div class="modal-buttons d-none d-lg-block">
+          <button type="button" class="btn me-2 signin" data-bs-toggle="modal" data-bs-target="#signin">
+            <i class="far fa-user"></i> Signin 
+          </button>
+          <button type="button" class="btn me-2 signin" data-bs-toggle="modal" data-bs-target="#register">
+            Register
+          </button>
+        </div>
+
+
+        <!-- search -->
+        <form class="d-flex" class="myForm2" id="myFormId2" onsubmit="return registerValidate2()">
+
+
+          <input class="form-control me-2" type="search" name="inputSearch" id="inputSearch" class="search" placeholder="Search">
+          <div class="invalid-feedback" id="errorSearch"></div>
+          <button class="btn btn-search" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CAROUSEL -->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="https://birdyana.com/wp-content/uploads/2021/07/slider-1-sm.jpg" class="d-block w-100 d-lg-none" alt="...">
+        <img src="https://birdyana.com/wp-content/uploads/2021/07/slider-1.jpg" class="d-block w-100 d-none d-lg-block" alt="...">
+        <div class="carousel-caption d-none d-lg-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="https://birdyana.com/wp-content/uploads/2021/07/slider-2-sm.jpg" class="d-block w-100 d-lg-none" alt="...">
+        <img src="https://birdyana.com/wp-content/uploads/2021/07/slider-2.jpg" class="d-block w-100 d-none d-lg-block" alt="...">
+        <div class="carousel-caption d-none d-lg-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://birdyana.com/wp-content/uploads/2021/07/slider-3-sm.jpg" class="d-block w-100 d-lg-none" alt="...">
+        <img src="https://birdyana.com/wp-content/uploads/2021/07/slider-3.jpg" class="d-block w-100 d-none d-lg-block" alt="...">
+        <div class="carousel-caption d-none d-lg-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://birdyana.com/wp-content/uploads/2021/07/slider-4-sm.jpg" class="d-block w-100 d-lg-none" alt="...">
+        <img src="https://birdyana.com/wp-content/uploads/2021/07/slider-4.jpg" class="d-block w-100 d-none d-lg-block" alt="...">
+        <div class="carousel-caption d-none d-lg-block">
+          <h5>Fourth slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</header>
+
+<main>
+  <div>
+      <!-- Button trigger modal -->
+    <div class="modal-buttons-2 d-lg-none container-fluid p-3">
+      <div class="row shadow-sm pt-3 pb-3 ps-0 pe-0">
+        <div class="col-12 pb-3 col-md-6 text-center">
+          <h3 class="text-warning">My account</h3>
+          <button type="button" class="btn me-2 signin w-auto fs-5" data-bs-toggle="modal" data-bs-target="#signin">Signin 
+          </button>
+        </div>
+        <div class="col-12 col-md-6 text-center">
+          <h3 class="text-warning">Not costumer yet ?</h3>
+          <button type="button" class="btn me-2 signin w-auto" data-bs-toggle="modal" data-bs-target="#register">
+            Register
+          </button>
+        </div>
+      </div>
+      
+      
+    </div>
+
+  </div>
+  <div class="container-fluid m-0 p-0">
+    <div class="row">
+      <div class="col-12 col-lg-6 p-0">
+        <img class="fluid w-100" src="https://birdyana.com/wp-content/uploads/2021/07/libretas-1.jpg" alt="">
+      </div>
+      <div class="col-12 col-lg-6 p-5 texto">
+        <p class="title-2 text-primary mt-lg-4">Eius et repellendus</p>
+        <hr class="p-0 m-1">
+        <h2 class="fs-2">Summer Sales </h2>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius et repellendus ipsa error excepturi ad dicta sunt nesciunt. Dicta, tempore. Temporibus aliquid.lorem
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nam laboriosam debitis ipsam, saepe voluptatum aut omnis dolores culpa perferendis.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius et repellendus ipsa error excepturi ad dicta sunt nesciunt. Dicta, tempore. Temporibus aliquid.lorem
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid m-0 p-0">
+    <div class="row">
+      <div class="col-12 col-lg-6  p-0 d-lg-none">
+        <img class="fluid w-100" src="https://birdyana.com/wp-content/uploads/2021/07/wall01.jpg" alt="">
+      </div>
+        <div class="col-12 col-lg-6 p-5 texto">
+        <p class="title-2 text-primary mt-lg-4">Eius et repellendus</p>
+        <hr class="p-0 m-1">
+        <h2 class="fs-2"> Aspernatur laboriosam </h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius et repellendus ipsa error excepturi ad dicta sunt nesciunt. Dicta, tempore. Temporibus aliquid.lorem
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nam laboriosam debitis ipsam, saepe voluptatum aut omnis dolores culpa perferendis.
+          </p>
+      </div>
+      <div class="col-12 col-lg-6  p-0 d-none d-lg-block">
+        <img class="fluid w-100" src="https://birdyana.com/wp-content/uploads/2021/07/wall01.jpg" alt="">
+      </div>
+      
+    </div>
+  </div>
+  <footer class="container-fluid text-light p-3 text-center bg-dark">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut autem repellat eligendi laborum vitae iste ratione .</p>
+  </footer>
+  
+
+</main>
+
+
+
+
+
+
+    <!-- modal signin -->
+    <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- modal-header -->
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">My account</h4>
+            <button type="button" class="btn-close btn-dark"  data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- modal-body -->
+          <div class="modal-body">
+            <h5>Sing in</h5>
+
+
+
+
+            <!-- Formulario signin -->
+            <!-- ************************************************************ -->
+              <form action="proceso.php" method="POST" id='myFormId' onsubmit="return registerValidate()" name='myForm'>
+
+                <!-- email -->
+                <label for="inputEmail">Email</label> 
+                <input type="text" name="inputEmail" class="form-control"  id="inputEmail">
+                <div class="invalid-feedback" id="errorEmail"></div>
+                
+
+                <label for="inputPassword">Password</label> 
+                <input type="password" name="inputPassword" id="inputPassword" class="form-control">
+                <div class="invalid-feedback" id="errorPassword"></div>
+
+              
+                <input type="submit" value="SUBMIT" class="btn btn-myb float-end mt-5">
+              </form>
+
+
+              <div class="lost-password p-2">
+                <a class="text-danger" href="#">¿Lost your password?</a>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal register-->
+    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- modal-header -->
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">¿ New costumer ? Register</h4>
+            <button type="button" class="btn-close btn-dark"  data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- modal-body -->
+          <div class="modal-body">
+            <div class="container-fluid p-0 p-md-3">
+
+
+            <!-- Formulario registro -->
+            <!-- ************************************************************ -->
+              <form action="proceso.php" method="POST" id="myFormId3" class="form-control-sm" onsubmit="return registerValidate3()">
+
+                <label for="inputName">Name & Surname</label>
+                <input type="text" name = "inputName" id="inputName" class="form-control">
+                <div class="invalid-feedback" id="errorName"></div>
+
+                <!-- email -->
+                <label for="inputEmail2">Email</label> 
+                <input type="text" name="inputEmail2" class="form-control"  id="inputEmail2">
+                <div class="invalid-feedback" id="errorEmail2"></div>
+
+                <label for="inputPassword2">Password</label>
+                <input type="password" name = "inputPassword2" id="inputPassword2" class="form-control">
+                <div class="invalid-feedback" id="errorPassword2"></div>
+
+                <label for="inputPassword3">Confirm Password</label>
+                <input type="password" name = "inputPassword3" id="inputPassword3" class="form-control">
+                <div class="invalid-feedback" id="errorPassword3"></div>
+
+                <label for="inputMobile">Mobile</label>
+                <input type="tel" name = "inputMobile" id="inputMobile" class="form-control" placeholder="ex = 999 99 99 99">
+                <div class="invalid-feedback" id="errorMobile"></div>
+                
+                
+  
+                <!-- checkbox -->
+                <div class="">
+                  <label for="inputProvince">Province</label>
+                  <select id="inputProvince" class="form-control">
+                  <option selected value=""></option>
+                  <option>Barcelona</option>
+                  <option>Girona</option>
+                  <option>Tarragona</option>
+                  <option>Lleida</option>
+                  </select>
+                  <div class="invalid-feedback" id="errorProvince"></div>
+                </div>
+                <!-- radio -->
+                <div class="p-2">
+                  <label for="">Male
+                    <input type="radio" name="gender" checked value="male"> 
+                  </label>
+                  <label for="">Female
+                  <input type="radio" name="gender" value="female">
+                  </label>
+                </div>
+                <div>
+                <input type="submit" value="SUBMIT" class="btn btn-myb float-end">
+                </div>
+              </form>
+            </div>
+
+          </div>
+          <!-- new Costumer -->
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col">
+
+          <!-- formulario -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+<!--//////////    SCRIPTS   //////////////////////////////////////////  -->
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/65c85190ca.js" crossorigin="anonymous"></script>
+
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="bootstrap/dist/js/bundle-popper.js"></script>
+
+  <script src="form.js"></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="ico.png" sizes="16x16">
+
+    <title>Nivell 1</title>
+
+    <style>
+        body {
+            background-color: rgb(0, 179, 179);
+            font-size: 4vw;
+            color:white;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <script>
+
+        function calculadora(operador, num1, num2){
+            if(operador == "sumar"){
+                return num1 + num2;
+            }else if(operador == "restar"){
+                return num1 - num2;
+            }else if(operador == "multiplicar"){
+                return num1 * num2;
+            }else{
+                alert("Opción incorrecta")
+            }
+        }
+
+
+        //Banco de pruebas
+        var num1 = 5;
+        var num2 = 6;
+        var operador = "sumar";
+
+
+        var resultat = calculadora(operador, num1, num2);
+        document.write("<p> El resultado de la operación es: " + resultat + "</p>");
+    
+    </script>
+    
+</body>
+</html>

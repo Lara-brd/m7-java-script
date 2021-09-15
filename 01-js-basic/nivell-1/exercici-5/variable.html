@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/vnd.migcrosoft.icon" href="ico.png" sizes="16x16">
+
+    <title>Nivell 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            background-color: purple;
+            color:white;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <h2 id="texto"></h2>
+    </div>
+
+    <script>
+
+        do{
+            var nota_examen = prompt("Introduce la nota del examen");
+            var nota = document.getElementById('texto');
+            
+            //no es número
+            if(isNaN(nota_examen)){
+                alert('Introduce un número')
+            //es un número
+            }else if(!isNaN(nota_examen)){
+                if(nota_examen < 5){
+                alert("Ohh has suspendido con un " + nota_examen + " necesitas estudiar más.");
+                nota.innerHTML = 'Suspenso, necesitas estudiar, la nota es un: '+ nota_examen;
+                }else{
+                alert("Has aprobado con un " + nota_examen + " !!!!!" );
+                nota.innerHTML = 'Has aprobado con un: '+ nota_examen;
+                }
+            }else{
+                alert('Error desconocido');
+            }
+        }while(isNaN(nota_examen));
+       
+    </script>
+    
+</body>
+</html>
